@@ -1,5 +1,5 @@
 # basic image with installed python
-FROM python:3.9-alpine
+FROM python:3.9-slim
 WORKDIR /app
 # install curl
 RUN apt update && apt install curl -y
