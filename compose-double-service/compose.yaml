@@ -1,0 +1,33 @@
+version: "3.6"
+services:
+  back:
+    build: ./back
+    environment:
+      FRONT_URL: front
+    ports:
+      - "80:8080"
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 100M
+        reservations:
+          cpus: '0.0001'
+          memory: 50M
+    healthcheck:
+      test: [ "CMD", "curl", "http://localhost:8080" ]
+      interval: 10s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+  front:
+      build: ./front
+      deploy:
+        resources:
+          limits:
+            cpus: '1'
+            memory: 100M
+          reservations:
+            cpus: '0.0001'
+            memory: 50M
