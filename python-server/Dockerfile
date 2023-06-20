@@ -4,7 +4,7 @@ WORKDIR /app
 # copy only req
 COPY requirements.txt requirements.txt
 # run install dependency
-RUN pip install --no-cache /wheels/*
+RUN pip install -r requirements.txt
 # copy all
 COPY . .
 #exspose port
