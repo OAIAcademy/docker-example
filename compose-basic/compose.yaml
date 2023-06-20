@@ -1,0 +1,14 @@
+version: "3.6"
+services:
+  web:
+    build: .
+    ports:
+      - "80:8080"
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 100M
+        reservations:
+          cpus: '0.0001'
+          memory: 50M
