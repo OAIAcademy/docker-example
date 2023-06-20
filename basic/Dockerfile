@@ -3,4 +3,4 @@ FROM alpine
 #define workdir
 WORKDIR /APP
 #command
-CMD ["ECHO","HELLO WORLD"]
+CMD ["echo","HELLO WORLD"]
