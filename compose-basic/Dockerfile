@@ -1,6 +1,8 @@
 # basic image with installed python
 FROM python:3.9-alpine
 WORKDIR /app
+# install curl
+RUN apt update && apt install curl -y
 # copy only req
 COPY requirements.txt requirements.txt
 # run install dependency

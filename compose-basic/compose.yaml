@@ -12,3 +12,9 @@ services:
         reservations:
           cpus: '0.0001'
           memory: 50M
+    healthcheck:
+      test: [ "CMD", "curl", "http://localhost:8080" ]
+      interval: 10s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
