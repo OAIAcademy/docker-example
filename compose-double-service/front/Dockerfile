@@ -10,5 +10,5 @@ RUN pip install -r requirements.txt
 # copy all
 COPY .. .
 #exspose port
-EXPOSE 80
+EXPOSE 8080
 CMD ["python3","-m", "APP"]
