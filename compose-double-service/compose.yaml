@@ -3,7 +3,7 @@ services:
   front:
     build: ./front
     environment:
-      FRONT_URL: http://localhost:8080
+      FRONT_URL: http://back:8080
     ports:
       - "80:8080"
     deploy:
