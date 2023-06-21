@@ -17,6 +17,7 @@ class MyServer(BaseHTTPRequestHandler):
 
 if __name__ == "__main__":
 
+    print(os.environ.get("FRONT_URL"))
     webServer = HTTPServer((hostName, serverPort), MyServer)
     print("Server started http://%s:%s" % (hostName, serverPort))
 
