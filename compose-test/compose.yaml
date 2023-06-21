@@ -1,0 +1,7 @@
+version: "3.6"
+services:
+  web:
+    build: .
+    ports:
+      - "80:8080"
+    command: ["python3","-m", "APP"]
