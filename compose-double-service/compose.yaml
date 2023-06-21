@@ -1,9 +1,9 @@
 version: "3.6"
 services:
-  back:
-    build: ./back
+  front:
+    build: ./front
     environment:
-      FRONT_URL: front
+      FRONT_URL: back
     ports:
       - "80:8080"
     deploy:
@@ -21,8 +21,8 @@ services:
       retries: 3
       start_period: 30s
 
-  front:
-      build: ./front
+  back:
+      build: ./back
       deploy:
         resources:
           limits:
